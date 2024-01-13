@@ -38,7 +38,6 @@
 - React JS
 - React Router for routing
 - React Context API + useReducer for data management
-- Vanilla CSS integrated with [Knight's Watch UI](https://knights-watch-ui.netlify.app/) Component Library
 - Razorpay Payment Integration API
 - Git For Version Control
 - Netlify for Deployment
