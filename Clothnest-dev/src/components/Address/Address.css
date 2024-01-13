@@ -1,0 +1,223 @@
+.no-address-para {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.new-address-button {
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  margin: 2.4rem auto;
+  border: 1px solid;
+  padding: 4px 8px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.new-address-button:hover {
+  border: 1.2px solid var(--primary);
+}
+
+.address-modal-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.newAddress-container {
+  position: relative;
+  width: 30%;
+  max-width: 70rem;
+  margin: 1rem auto;
+  display: flex;
+  border: 1px solid;
+  padding: 1rem;
+  flex-flow: column wrap;
+  border-radius: 8px;
+  background-color: var(--bg-darkWhite);
+}
+
+.newAddress-container-heading {
+  text-align: center;
+  margin-top: 0;
+  padding: 1.2rem 8px;
+  position: relative;
+  font-size: 2rem;
+}
+
+.newAddress-container-heading::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  bottom: 10%;
+  right: 30%;
+  border-bottom: 2px solid;
+}
+
+.field-container {
+  display: flex;
+  margin: 8px;
+  padding: 8px;
+  justify-content: space-between;
+}
+
+.field-container .field {
+  display: flex;
+  flex: 0 0 45%;
+  flex-direction: column;
+}
+
+.field-input {
+  height: 5rem;
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid;
+  outline: none;
+  border-radius: 2px;
+  padding: 0 8px;
+}
+
+.field-input:focus {
+  outline: none;
+  border: 1px solid var(--primary);
+}
+
+.address-container > .field {
+  flex: 0 0 100%;
+}
+
+.address-text {
+  justify-self: flex-start;
+  height: 7rem;
+  width: 100%;
+}
+
+.address-button-container {
+  margin: 1rem 2rem;
+  display: flex;
+  gap: 2.4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address-button-container button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid;
+  color: var(--bg-darkWhite);
+}
+
+.save-address-button {
+  background-color: var(--primary);
+}
+
+.cancel-address-button {
+  background-color: var(--danger);
+}
+
+.error-message-container {
+  font-size: 1rem;
+  padding: 6px 1.2rem 0;
+  color: var(--danger);
+  max-width: 19rem;
+}
+
+.address-container .error-message-container {
+  max-width: 100%;
+}
+
+.address-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.2rem;
+  border-collapse: collapse;
+}
+
+.address-list .address-list-item:first-child {
+  border-top: 1px solid var(--border-light);
+  border-radius: 2px 0;
+}
+
+.address-list .address-list-item {
+  border: 1px solid var(--border-light);
+  border-top: 0;
+  padding: 2rem;
+}
+
+.address-list .address-list-item:last-child {
+  border-radius: 0 2px;
+}
+
+.address-item-row {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.address-username {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.address-mobile {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.address-row {
+  margin-top: 1.2rem;
+  gap: 0;
+}
+
+.address-item {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.address-item:not(:first-child) {
+  margin-left: 4px;
+}
+
+.addressList-button-container {
+  margin: 1.4rem 0 0;
+  width: max-content;
+}
+
+.addressList-button-container .save-address-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: flex-start;
+}
+
+.input-default-address {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.input-default-address label {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 540px) {
+  .newAddress-container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .address-mobile {
+    margin-left: 1.2rem;
+  }
+}

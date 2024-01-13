@@ -1,0 +1,237 @@
+.Nav-header {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-lightWhite);
+  height: 60px;
+  padding: 2.4rem 4.8rem;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.brand-logo {
+  width: 5rem;
+  height: 5rem;
+  display: none;
+}
+
+.brand-name {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-Dark);
+  cursor: pointer;
+}
+
+.brand-name span {
+  font-family: "Dancing Script", sans-serif;
+}
+
+.searchbar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  width: 30%;
+  border: 1px solid var(--text-grey);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: var(--bg-darkWhite);
+}
+
+.searchbar-close {
+  position: absolute;
+  top: 53%;
+  right: 10%;
+  transform: translateY(-50%);
+  height: max-height;
+  cursor: pointer;
+  color: var(--primary-Dark);
+}
+
+.searchbar > .icon {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.searchbar > input {
+  font-size: 1.4rem;
+  padding: 0 1.2rem;
+  border: none;
+  width: 100%;
+  outline: none;
+  color: var(--text-Dark);
+  font-weight: 500;
+  font-size: 1.2rem;
+  background-color: var(--bg-darkWhite);
+  cursor: initial;
+}
+
+.Nav-header .action-container {
+  display: flex;
+  align-items: center;
+}
+
+.btn-login {
+  width: 8rem;
+  padding: 0.8rem 1.6rem;
+  margin: 0 1.2rem;
+  text-align: center;
+  background-color: var(--primary);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  font-size: 1.4rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  transform: scale(1.01);
+  border: 1px solid var(--text-Dark);
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0 1.2rem;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  margin-top: 0.8rem;
+}
+
+#profile .mui-icon {
+  font-size: 2.8rem;
+}
+
+.profile-container label {
+  color: initial;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.profile-container:hover {
+  color: var(--primary);
+}
+
+.action-container > .icon a {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1.2rem;
+  font-size: 1.2rem;
+}
+
+.icon > label {
+  font-family: "Nunito sans", sans-serif;
+  font-weight: 700;
+}
+
+.action-container .mui-icon {
+  font-size: 2.4rem;
+}
+
+.action-container > .icon .mui-icon:hover {
+  color: var(--primary);
+}
+
+.nav-label {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.nav-count {
+  font-weight: bolder;
+  position: absolute;
+  background-color: var(--primary);
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  top: -35%;
+  right: -40%;
+}
+
+.btn-logout {
+  padding: 0.8rem 1.6rem;
+  margin: 0 1.2rem;
+  background: linear-gradient(rgba(96, 212, 228, 0.8), var(--primary-Light));
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  font-size: 1.4rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 920px) {
+  .Nav-header {
+    padding: 1.2rem;
+  }
+
+  .Nav-header .action-container {
+    margin-right: 12rem;
+  }
+
+  .Nav-header .action-container {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .searchbar {
+    left: 50%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .searchbar {
+    left: 50%;
+    top: 160%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+  }
+
+  .Nav-header .action-container {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .brand-name span {
+    display: none;
+  }
+
+  .brand-logo {
+    display: flex;
+    z-index: 10;
+  }
+
+  .searchbar {
+    left: 50%;
+    top: 160%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+  }
+}

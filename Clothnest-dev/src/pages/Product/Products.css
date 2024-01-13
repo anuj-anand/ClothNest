@@ -1,0 +1,135 @@
+.products-outer-container {
+  display: flex;
+  position: relative;
+}
+
+.products-container {
+  width: 100%;
+}
+
+.product-menu {
+  margin: 1rem 0;
+  flex: 0 1 90%;
+  padding: 1.2rem 4.8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-rows: auto repeat(2, minmax(15rem, max-content));
+  gap: 3.6rem 0;
+  place-items: center;
+}
+
+.page-path-heading {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  place-self: start;
+}
+
+.product-counter {
+  font-size: 2.4rem;
+}
+
+.product-menu .no-item {
+  grid-column: 1 / -1;
+}
+
+.pagination-container {
+  margin: 4rem 0 2rem;
+}
+
+.paginateClass {
+  display: flex;
+  width: max-content;
+  margin: auto;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  list-style: none;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.previousLink,
+.nextLink {
+  padding: 2px 5px;
+  margin: 0 10px;
+  color: var(--text-Dark);
+  border-radius: 5px;
+  border: 2px solid var(--secondary);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.paginateClass a:not(.activeLink, .previousLink, .nextLink) {
+  border: transparent;
+  padding: 5px;
+  color: var(--unnamed-color-303f60);
+  font-size: 1.4rem;
+}
+
+.activeLink {
+  border: none;
+  width: 5rem;
+  height: 5rem;
+  padding: 5px 1rem;
+  border-radius: 50%;
+  color: var(--text-Dark);
+  background-color: var(--primary-Light);
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 920px) {
+  .product-menu {
+    padding: 1.2rem 2.4rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .product-menu {
+    flex: 0 1 85%;
+  }
+
+  .product-menu {
+    padding: 1.2rem 2.4rem;
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .product-menu {
+    flex: 1 1 100%;
+    padding: 1.2rem;
+    gap: 3.6rem 1rem;
+  }
+
+  .Sidenav {
+    flex: 0 0 5%;
+  }
+
+  .product-counter {
+    font-size: 1.8rem;
+  }
+
+  .products-outer-container {
+    margin: 6rem 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Sidenav {
+    flex: 0;
+  }
+
+  .product-menu {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,27 @@
+.page-path {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.cart-wish-path {
+  margin: 2rem 0 0 4rem;
+}
+
+.path-item {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.path-item:not(:last-child):hover {
+  color: var(--primary);
+}
+
+@media screen and (max-width: 450px) {
+  .cart-wish-path {
+    margin: 1rem 0 0 6px;
+  }
+}

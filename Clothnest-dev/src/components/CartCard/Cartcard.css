@@ -1,0 +1,165 @@
+.product {
+  display: flex;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
+  height: 25rem;
+}
+
+.product-img {
+  flex: 0 1 50%;
+  border-right: 1px solid;
+  cursor: pointer;
+}
+
+.product-img img {
+  object-fit: fill;
+}
+
+.product-content {
+  flex: 0 1 50%;
+  padding: 1.2rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-content .product-name {
+  font-size: 1.8rem;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  padding-left: 1.2rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  padding-left: 1.2rem;
+}
+
+.sell-price {
+  font-weight: 800;
+  font-family: "Nunito Sans", sans-serif;
+  color: #000;
+}
+
+.cost-price {
+  padding: 0 1.2rem;
+  text-decoration: line-through;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.discount {
+  font-size: 1.4rem;
+  color: red;
+}
+
+.quantity {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 0 1.2rem;
+}
+
+.quantity label {
+  font-size: 1.2rem;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 0 0 60%;
+}
+
+.plus,
+.minus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--text-greyDark);
+  color: var(--bg-darkWhite);
+  height: 15px;
+  width: 15px;
+  padding: 0.5rem;
+  border-radius: 100rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.qty {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.btn-container {
+  gap: 1.2rem;
+  padding: 2.4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.product-pricing {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 920px) {
+  .product {
+    height: 40rem;
+  }
+
+  .product-img {
+    flex: auto;
+    height: 50%;
+    border-right: none;
+  }
+
+  .product-content {
+    flex: auto;
+    height: 50%;
+  }
+
+  .product-pricing {
+    padding: 0;
+  }
+
+  .btn-container {
+    gap: 1.2rem;
+    padding: 2.4rem 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .product-content {
+    padding: 1.2rem 0.6rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .btn-container > * {
+    flex: 0 1 50%;
+  }
+}

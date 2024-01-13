@@ -1,0 +1,56 @@
+.card {
+  width: 90%;
+  height: max-content;
+  border: none;
+  overflow: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.wishlist-card .card-image-container {
+  flex: 0 0 50%;
+  cursor: pointer;
+  min-height:68%;
+}
+
+.wishlist-card .card-image-container img {
+  object-fit: fill;
+}
+
+.wishlist-card .product-content-container {
+  flex: 0 0 15%;
+}
+
+.card .manufacturer {
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.product-card .action-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem 1.2rem;
+  gap: 1.2rem;
+}
+
+.product-card .action-container .btn {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  margin: 0;
+}
+
+.btn {
+  border-radius: 5px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 920px) {
+  .wishlist-card .card-image-container {
+    cursor: pointer;
+  }
+}

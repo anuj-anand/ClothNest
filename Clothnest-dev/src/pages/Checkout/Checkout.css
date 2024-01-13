@@ -1,0 +1,148 @@
+.checkout-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2.4rem 4.8rem 1.2rem;
+  justify-content: space-between;
+}
+
+.checkout-address-container {
+  flex: 0 1 60%;
+  padding: 2.4rem 3.6rem;
+}
+
+.checkout-summary {
+  margin: 3.6rem 0;
+  flex: 0 1 35%;
+  padding: 1.2rem 2.4rem;
+  background: var(--text-greyLight);
+  border-radius: 5px;
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.2);
+  height: max-content;
+}
+
+.checkout-summary-heading {
+  position: relative;
+  margin: 1.2rem auto 3.6rem;
+  width: max-content;
+}
+
+.checkout-summary-heading::after {
+  position: absolute;
+  bottom: -40%;
+  left: -7%;
+  content: "";
+  width: 120%;
+  height: 2px;
+  background-color: var(--text-Dark);
+}
+
+.checkout-no-address {
+  margin: 2.4rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.checkout-address-button {
+  margin-top: 3.6rem;
+}
+
+.checkout-address-list {
+  margin: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 1.2rem 2.4rem;
+}
+
+.checkout-address-list-row {
+  padding: 1.2rem 2.4rem;
+  display: flex;
+  gap: 2.4rem;
+  border: 1px solid var(--border-dark);
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkout-address-item {
+  cursor: pointer;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .checkout-address-list {
+    padding: 1.2rem 0;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .checkout-address-container {
+    flex: 0 1 60%;
+    padding: 2.4rem 1.6rem;
+  }
+
+  .checkout-summary {
+    flex: 0 1 35%;
+  }
+
+  .checkout-address-list {
+    margin: 1.2rem 0;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .checkout-container {
+    flex-direction: column;
+    min-height: max-content;
+  }
+
+  .checkout-address-container {
+    flex: 0 1 60%;
+    padding: 2.4rem 1.6rem;
+  }
+
+  .checkout-summary {
+    width: 60%;
+    margin: auto;
+    margin-top: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .checkout-summary {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1.2rem;
+  }
+
+  .address-item-row {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .checkout-container {
+    padding: 2.4rem 1.6rem;
+    justify-content: flex-start;
+  }
+
+  .checkout-address-container {
+    width: 100%;
+    padding: 2.4rem 0;
+  }
+
+  .checkout-address-list {
+    padding: 1.2rem 0;
+}
+
+  .checkout-summary {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1.2rem;
+  }
+
+  .address-item-row {
+    gap: 0;
+  }
+}

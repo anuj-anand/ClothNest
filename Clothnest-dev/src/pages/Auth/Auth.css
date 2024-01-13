@@ -1,0 +1,208 @@
+.auth-main {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    url("https://res.cloudinary.com/ajain8479/image/upload/v1648041157/E-com%20Images/login-bg_buj8t5.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-container {
+  background-color: var(--bg-white);
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.4rem;
+  border-radius: 1rem;
+}
+
+.page-heading {
+  text-align: center;
+  font-size: 3.6rem;
+  font-weight: 600;
+}
+
+.forgot-page-heading {
+  font-size: 2.4rem;
+}
+
+.auth-container .login {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  padding: 1.6rem;
+  padding-bottom: 0;
+}
+
+.auth-field {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-field label {
+  margin: 1.2rem 0;
+  color: var(--text-greyDark);
+  font-size: 1.2rem;
+}
+
+.auth-field input {
+  height: 3.6rem;
+  padding: 1.2rem;
+  width: 100%;
+  cursor: default;
+  border: 0.5px solid;
+}
+
+.auth-field input:active,
+.auth-field input:focus {
+  outline-color: var(--primary);
+}
+
+.btn-auth {
+  margin: 1.6rem 0;
+  padding: 0.8rem 1.6rem;
+  background-color: var(--primary);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  font-size: 1.4rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-auth:hover {
+  transform: none;
+  border: none;
+  opacity: 0.8;
+}
+
+.remember-container {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resetLink {
+  text-decoration: underline;
+}
+
+label[for="remember"] {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.redirection {
+  font-size: 1.2rem;
+}
+
+.signUp {
+  text-decoration: underline;
+  color: var(--primary);
+  font-size: 1.4rem;
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+.auth-container .signup-form {
+  padding: 0;
+}
+
+.password-field {
+  position: relative;
+}
+
+.off {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  right: 0%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6rem;
+}
+
+.on {
+  position: absolute;
+  cursor: pointer;
+  right: 0%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6rem;
+}
+
+/* SignUp page styles override */
+
+.signup-form .field label {
+  margin: 0.6rem 0;
+}
+
+.guest-credentials {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0 4px;
+}
+
+.auth-field-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.auth-field-row > .auth-field {
+  flex: 0 0 48%;
+  margin-bottom: 0;
+}
+
+/* Responsiveness */
+@media screen and (min-width: 1200px) {
+  .auth-container {
+    width: 60rem;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .auth-container {
+    width: 50%;
+  }
+
+  label[for="remember"] {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .auth-container {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .auth-container {
+    width: 80%;
+    padding: 1.2rem;
+  }
+
+  .auth-container .login{
+    padding: 1.2rem 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .auth-container {
+    width: 90%;
+    padding: 2.4rem 1.2rem;
+  }
+
+  .auth-container .login {
+    padding: 0;
+  }
+}

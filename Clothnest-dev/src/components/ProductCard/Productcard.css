@@ -1,0 +1,125 @@
+.product-card {
+  height: 400px;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #fff;
+  box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
+    rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+  width: 90%;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.card-image-container {
+  height: 55%;
+  border-bottom: 1px solid;
+}
+
+.product-content-container {
+  height: 30%;
+  justify-content: center;
+}
+
+.btn-action-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-action-container .btn-primary {
+  background-color: var(--primary);
+  border-radius: 4px;
+  width: 90%;
+  height: max-content;
+}
+
+.product-card .price .discount {
+  margin-bottom: 0;
+}
+
+.btn-action-container .btn-primary:hover {
+  opacity: 0.8;
+}
+
+.heart-icon-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  padding: 8px;
+  background-color: var(--bg-lightWhite);
+  border-radius: 99rem;
+  transition: tranform 0.3s ease-in-out;
+}
+
+.heart-icon-container .heart-icon {
+  font-size: 2rem;
+}
+
+.heart-icon-container:hover {
+  transform: scale(1.05);
+}
+
+.heart-icon-container:hover .heart-icon {
+  fill: red;
+}
+
+.heart-icon-container .favourite-icon {
+  fill: red;
+}
+
+.item-name {
+  margin-top: 0.5rem;
+}
+
+.badge-item {
+  top: 2%;
+  left: -4%;
+  border-radius: 4px 8px;
+  padding-left: 2rem;
+}
+
+.rating-category-container {
+  display: flex;
+  align-items: center;
+}
+
+.rating {
+  height: 3.2rem;
+  width: 4rem;
+  display: inline-flex;
+  width: 20%;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: hsl(227, 10%, 36%, 0.6);
+  margin-left: 1rem;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+}
+
+.rating-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-container {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 540px) {
+  .product-card {
+    width: 100%;
+  }
+}
